@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "939865469374",
+    "firebase_url": "https://dzienniczekucznia-f51ec.firebaseio.com",
+    "project_id": "dzienniczekucznia-f51ec",
+    "storage_bucket": "dzienniczekucznia-f51ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939865469374:android:5318b42a465859ea",
+        "android_client_info": {
+          "package_name": "com.example.user.dzienniczekucznia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939865469374-kk0ia7ru7vdneet0mg7r7h5ola2fp52v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.dzienniczekucznia",
+            "certificate_hash": "c0e5c339e60aeac9b31e5af620eafaebf8e9893d"
+          }
+        },
+        {
+          "client_id": "939865469374-su71brcfokesjiea54hneir6m9kfj092.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "939865469374-su71brcfokesjiea54hneir6m9kfj092.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwa4nqGd3spL1OGOQ4xuEpcwvwjEGYWYo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939865469374-su71brcfokesjiea54hneir6m9kfj092.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

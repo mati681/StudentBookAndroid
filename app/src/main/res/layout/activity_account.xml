@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity">
+
+    <!-- Comment this ImageView after you have handled the image background with Java at the Activity-->
+    <ImageView
+        android:id="@+id/formBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <ImageButton
+        android:id="@+id/ocenybtn"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/planbtn"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/btn_oceny" />
+
+    <ImageButton
+        android:id="@+id/planbtn"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="43dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/btn_plan" />
+
+    <ImageButton
+        android:id="@+id/ogloszeniabtn"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="105dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/btn_oglo" />
+
+    <ImageButton
+        android:id="@+id/uwagibtn"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/ogloszeniabtn"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/btn_uwagi" />
+
+    <TextView
+        android:id="@+id/zalogowanyjako"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:textStyle="normal|bold|italic" />
+
+    <ImageButton
+        android:id="@+id/logOutBtn"
+        android:layout_width="165dp"
+        android:layout_height="159dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#0000"
+        app:srcCompat="@drawable/btn_exit" />
+
+    <TextView
+        android:id="@+id/studiujeszwgrupie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/zalogowanyjako"
+        android:text="Studiujesz w grupie: "
+        android:textSize="20sp"
+        android:textStyle="normal|bold|italic" />
+
+</RelativeLayout>
