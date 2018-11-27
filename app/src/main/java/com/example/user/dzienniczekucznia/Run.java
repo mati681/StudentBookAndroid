@@ -1,11 +1,13 @@
 package com.example.user.dzienniczekucznia;
 
+import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.*;
 
 public class Run {
 
@@ -14,26 +16,16 @@ public class Run {
     public static final String PASSWORD = "admin";
 
     public static void main(String[] args) {
-        Controller controller = new Controller();
-        controller.start();
+       Controller controller = new Controller();
+       controller.start();
+       PostgreSQL postgreSQL = new PostgreSQL();
+       postgreSQL.start();
 
-        try {
-            Class.forName("org.postgresql.Driver");
 
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        String url = "jdbc:postgresql:localhost:5432/postgres";
-        Connection conn;
-        try {
-            conn = DriverManager.getConnection(url, USER, PASSWORD);
+        String sql;
+        sql = "SELECT  first, last FROM Employees";
+        System.out.println(sql);
 
-            conn =  DriverManager.getConnection(url);
-            System.out.println("Connected");
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            Log.e("Tag", "Description", e);
-        }
+        // tu dodać odwołanie do MainActivity
     }
 }

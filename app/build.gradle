@@ -56,4 +56,5 @@ dependencies {
 
     }
     apply plugin: 'com.google.gms.google-services'
+    implementation files('libs/postgresql-42.2.5.jar')
 }
