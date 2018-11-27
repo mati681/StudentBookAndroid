@@ -56,6 +56,15 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
        // text = (TextView) findViewById(R.id.tvConnect);
+        Controller controller = new Controller();
+        controller.start();
+        PostgreSQL postgreSQL = new PostgreSQL();
+        postgreSQL.start();
+
+
+        String sql;
+        sql = "SELECT  first, last FROM Employees";
+        System.out.println(sql);
 
 
 
