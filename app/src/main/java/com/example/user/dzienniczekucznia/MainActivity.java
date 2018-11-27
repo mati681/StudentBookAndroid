@@ -46,10 +46,9 @@ public class MainActivity extends AppCompatActivity  {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
-    private static final String dbname = "postgres";
-    public static final String USER = " yOUR_DATABASE_USERNAME";
-    public static final String PASSWORD = "DATABASE_PASSWORD";
+
     TextView text;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,24 +57,7 @@ public class MainActivity extends AppCompatActivity  {
 
        // text = (TextView) findViewById(R.id.tvConnect);
 
-        try {
-            Class.forName("org.postgresql.Driver");
 
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        String url = "jdbc:postgresql:localhost:5432/postgres";
-        Connection conn;
-        try {
-            //conn = DriverManager.getConnection(url, USER, PASSWORD);
-
-            conn =  DriverManager.getConnection(url);
-            text.setText("Connected");
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            Log.e("Tag", "Description", e);
-        }
 
 
         if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
