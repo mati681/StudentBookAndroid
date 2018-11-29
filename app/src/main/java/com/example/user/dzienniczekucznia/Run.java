@@ -1,8 +1,8 @@
 package com.example.user.dzienniczekucznia;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
+import com.example.user.dzienniczekucznia.api.Controller;
+import com.example.user.dzienniczekucznia.data.PostgreSQL;
+import com.example.user.dzienniczekucznia.service.GoogleAuth;
 
 
 public class Run {
@@ -11,6 +11,7 @@ public class Run {
        controller.start();
        PostgreSQL postgreSQL = new PostgreSQL();
        postgreSQL.start();
+       //GoogleAuth googleAuth = new GoogleAuth();
 
 
         String sql;

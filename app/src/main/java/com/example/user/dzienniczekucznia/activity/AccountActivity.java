@@ -1,4 +1,4 @@
-package com.example.user.dzienniczekucznia;
+package com.example.user.dzienniczekucznia.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 
+import com.example.user.dzienniczekucznia.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;

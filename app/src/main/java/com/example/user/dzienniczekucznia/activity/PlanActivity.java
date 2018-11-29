@@ -1,6 +1,7 @@
-package com.example.user.dzienniczekucznia;
+package com.example.user.dzienniczekucznia.activity;
 
 
+import com.example.user.dzienniczekucznia.R;
 import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 
 import android.app.Activity;

@@ -1,7 +1,9 @@
-package com.example.user.dzienniczekucznia;
+package com.example.user.dzienniczekucznia.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.user.dzienniczekucznia.R;
 
 public class OcenyActivity extends AppCompatActivity {
 

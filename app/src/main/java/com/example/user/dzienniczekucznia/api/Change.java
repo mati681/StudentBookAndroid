@@ -1,4 +1,4 @@
-package com.example.user.dzienniczekucznia;
+package com.example.user.dzienniczekucznia.api;
 
 public class Change {
     String subject;

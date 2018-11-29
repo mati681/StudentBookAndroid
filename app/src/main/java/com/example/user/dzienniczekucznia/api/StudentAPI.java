@@ -1,4 +1,6 @@
-package com.example.user.dzienniczekucznia;
+package com.example.user.dzienniczekucznia.api;
+
+import com.example.user.dzienniczekucznia.api.Change;
 
 import java.util.List;
 

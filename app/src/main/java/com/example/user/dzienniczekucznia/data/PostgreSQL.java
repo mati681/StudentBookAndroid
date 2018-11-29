@@ -1,4 +1,4 @@
-package com.example.user.dzienniczekucznia;
+package com.example.user.dzienniczekucznia.data;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
@@ -36,13 +36,13 @@ public class PostgreSQL {
             Class.forName("org.postgresql.Driver");
 
             /* Create connection url. */
-            String mysqlConnUrl = "jdbc:postgresql://localhost:5432/postgres";
+            String mysqlConnUrl = "jdbc:postgresql://localhost:5432/TIM_FINALL";
 
             /* user name. */
-            String mysqlUserName = "admin";
+            String mysqlUserName = "postgres";
 
             /* password. */
-            String mysqlPassword = "admin";
+            String mysqlPassword = "root";
 
             /* Get the Connection object. */
             ret = DriverManager.getConnection(mysqlConnUrl, mysqlUserName , mysqlPassword);

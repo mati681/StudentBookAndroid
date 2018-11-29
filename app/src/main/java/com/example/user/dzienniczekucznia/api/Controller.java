@@ -1,4 +1,4 @@
-package com.example.user.dzienniczekucznia;
+package com.example.user.dzienniczekucznia.api;
 
 import android.os.Build;
 import android.support.annotation.RequiresApi;
