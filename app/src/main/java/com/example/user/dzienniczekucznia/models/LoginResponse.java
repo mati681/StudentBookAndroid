@@ -1,4 +1,4 @@
-package com.example.user.dzienniczekucznia.model;
+package com.example.user.dzienniczekucznia.models;
 
 public class LoginResponse {
 

@@ -1,4 +1,4 @@
-package com.example.user.dzienniczekucznia.model;
+package com.example.user.dzienniczekucznia.models;
 
 import com.google.gson.annotations.SerializedName;
 
