@@ -52,7 +52,7 @@ public class RetrofitClient {
         return mInstance;
     }
 
-    public Api getApi() {
-        return retrofit.create(Api.class);
-    }
+  //  public Api getApi() {
+    //    return retrofit.create(Api.class);
+   // }
 }

@@ -10,6 +10,6 @@ import retrofit2.http.Query;
 
 public interface StudentAPI {
 
-    @GET("changes/")
+    @GET("marks/")
     Call<List<Change>> loadChanges(@Query("q") String status);
 }

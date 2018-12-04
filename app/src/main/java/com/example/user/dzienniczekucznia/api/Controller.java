@@ -16,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Controller implements Callback<List<Change>> {
 
-    static final String BASE_URL = "https://git.eclipse.org/r/";
+    static final String BASE_URL = "http://localhost:8070/";
 
     public void start() {
         Gson gson = new GsonBuilder()
