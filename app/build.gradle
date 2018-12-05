@@ -38,6 +38,8 @@ dependencies {
     // retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.1.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.alibaba:fastjson:1.2.54'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
     // Junit
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.0.0'
