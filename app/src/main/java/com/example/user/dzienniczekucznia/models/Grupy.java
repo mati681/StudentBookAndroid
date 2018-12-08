@@ -9,7 +9,9 @@ public class Grupy {
 
     private String name;
 
+    public Grupy() {
 
+    }
     public Grupy(Long id, String name) {
         this.id = id;
         this.name = name;

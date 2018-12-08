@@ -36,7 +36,8 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".activity.SiteActivity"></activity>
+        <activity android:name=".activity.SiteActivity" />
+        <activity android:name=".activity.JsonActivity"></activity>
     </application>
 
 </manifest>

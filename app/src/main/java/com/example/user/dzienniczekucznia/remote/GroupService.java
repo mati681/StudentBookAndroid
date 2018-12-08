@@ -9,7 +9,7 @@ import retrofit2.http.GET;
 
 public interface GroupService {
 
-    String BASE_URL = "http://192.168.157.1:8070/";
+    String BASE_URL = "http://192.168.157.1:8070";
 
     @GET("/groupmanagement/all")
     Call<ArrayList<Grupy>> getGrupy();
