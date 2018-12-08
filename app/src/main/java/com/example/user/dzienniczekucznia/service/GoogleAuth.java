@@ -39,8 +39,6 @@ public class GoogleAuth extends AppCompatActivity  {
     private FirebaseAuth.AuthStateListener mAuthListener;
 
 
-    TextView text;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

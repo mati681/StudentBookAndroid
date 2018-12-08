@@ -4,17 +4,19 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Grupy {
-
     @SerializedName("id")
-    @Expose
     private Long id;
-
     @SerializedName("name")
-    @Expose
     private String name;
+
+    public Grupy(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
+
     }
 
     public void setId(Long id) {
@@ -28,4 +30,6 @@ public class Grupy {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }
