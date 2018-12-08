@@ -4,10 +4,11 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Grupy {
-    @SerializedName("id")
+
     private Long id;
-    @SerializedName("name")
+
     private String name;
+
 
     public Grupy(Long id, String name) {
         this.id = id;

@@ -9,10 +9,8 @@ import android.widget.Toast;
 import com.example.user.dzienniczekucznia.R;
 import com.example.user.dzienniczekucznia.models.Grupy;
 import com.example.user.dzienniczekucznia.remote.Api;
-import com.example.user.dzienniczekucznia.remote.GroupService;
-import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
-import java.security.acl.Group;
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -45,11 +43,11 @@ public class OgloszeniaActivity extends AppCompatActivity {
         Api api = retrofit.create(Api.class);
 
         //Here we are using the api method that we created inside the api interface
-        Call<List<Grupy>> call = api.getGrupy();
+        Call<ArrayList<Grupy>> call = api.getGrupy();
 
-       call.enqueue(new Callback<List<Grupy>>() {
+       call.enqueue(new Callback<ArrayList<Grupy>>() {
            @Override
-           public void onResponse(Call<List<Grupy>> call, Response<List<Grupy>> response) {
+           public void onResponse(Call<ArrayList<Grupy>> call, Response<ArrayList<Grupy>> response) {
 
 
                List<Grupy> grupyList = response.body();
@@ -68,7 +66,7 @@ public class OgloszeniaActivity extends AppCompatActivity {
            }
 
            @Override
-           public void onFailure(Call<List<Grupy>> call, Throwable t) {
+           public void onFailure(Call<ArrayList<Grupy>> call, Throwable t) {
                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
            }
        });
