@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity  {
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
-            setContentView(R.layout.activity_json);
+            setContentView(R.layout.activity_site);
 
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             if (result.isSuccess()) {

@@ -28,6 +28,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(DataAdapter.ViewHolder holder, int position) {
         holder.tv_name.setText(grupy.get(position).getName());
+    //    holder.Ts_name.setText(grupy.get(position).getName());
 
 
     }
@@ -48,5 +49,10 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
 
         }
+    }
+    public void setData (ArrayList<Grupy> data)
+    {
+        grupy =  data;
+
     }
 }

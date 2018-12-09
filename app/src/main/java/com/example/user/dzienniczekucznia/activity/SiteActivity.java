@@ -42,6 +42,8 @@ public class SiteActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_site);
+            adapter = new DataAdapter(data);
+
 
             initViews();
         }
@@ -52,11 +54,13 @@ public class SiteActivity extends AppCompatActivity {
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
             recyclerView.setLayoutManager(layoutManager);
             loadJSON();
+            recyclerView.setAdapter(adapter);
+
         }
 
         private void loadJSON() {
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.157.1:8070/")
+                    .baseUrl("http://192.168.0.94:8070")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
             RequestInterface request = retrofit.create(RequestInterface.class);
@@ -67,8 +71,11 @@ public class SiteActivity extends AppCompatActivity {
 
                     JSONResponse jsonResponse = response.body();
                     data = new ArrayList<>(Arrays.asList(jsonResponse.getGrupy()));
-                    adapter = new DataAdapter(data);
-                    recyclerView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+                    adapter.setData(data);
+
+                    Log.e("RESPONSE",response.toString());
+
                 }
 
                 @Override
