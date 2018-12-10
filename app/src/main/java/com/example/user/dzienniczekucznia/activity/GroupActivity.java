@@ -32,7 +32,7 @@ public class GroupActivity extends AppCompatActivity {
         lstGatunek = (ListView)findViewById(R.id.lstGatunek);
 
 
-        View header = (View)getLayoutInflater().inflate(R.layout.layout_header_gatunek, null);
+        View header = (View)getLayoutInflater().inflate(R.layout.layout_header_grupa, null);
         lstGatunek.addHeaderView(header);
     }
 
@@ -46,7 +46,7 @@ public class GroupActivity extends AppCompatActivity {
                         Log.d("STDBOOK - onResponse", "Success: " + response.body().toString());
                         List<Grupy> responseData = response.body();
                         if(grupaAdapter == null) {
-                            grupaAdapter = new GrupaAdapter(_activity, R.layout.layout_item_gatunek, responseData);
+                            grupaAdapter = new GrupaAdapter(_activity, R.layout.layout_item_grupa, responseData);
                         }else {
                             grupaAdapter.clear();
                             grupaAdapter.addAll(responseData);

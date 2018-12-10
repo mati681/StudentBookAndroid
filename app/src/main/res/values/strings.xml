@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Dziennik Ucznia</string>
-	<string name="header_list_gatunek_nazwa">Nazwa gatunku</string>
-	<string name="header_list_id">ID</string>
+    <string name="header_list_gatunek_nazwa">Nazwa Przedmiotu</string>
+    <string name="header_list_id">Ocena</string>
 </resources>

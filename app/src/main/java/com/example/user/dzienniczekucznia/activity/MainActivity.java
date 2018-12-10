@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity  {
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
             //setContentView(R.layout.activity_group2);
-            Intent myIntent = new Intent(MainActivity.this, GroupActivity.class);
+            Intent myIntent = new Intent(MainActivity.this, MenuActivity.class);
             //myIntent.putExtra("key", value); //Optional parameters
             MainActivity.this.startActivity(myIntent);
 

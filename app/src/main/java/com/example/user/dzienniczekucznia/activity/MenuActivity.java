@@ -2,13 +2,11 @@ package com.example.user.dzienniczekucznia.activity;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 
 import com.example.user.dzienniczekucznia.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -17,7 +15,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class AccountActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
     private ImageButton mLogOutBtn;
     private GoogleApiClient mGoogleApiClient;
@@ -36,39 +34,16 @@ public class AccountActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account);
-        mAuth = FirebaseAuth.getInstance();
-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(AccountActivity.this);
-        String personName = acct.getDisplayName();
-        String personGivenName = acct.getGivenName();
-        String personFamilyName = acct.getFamilyName();
-        String personEmail = acct.getEmail();
-        String personId = acct.getId();
-        Uri personPhoto = acct.getPhotoUrl();
-
-
-        mTextView = (TextView) findViewById(R.id.zalogowanyjako);
-        mTextView.setText("Zalogowany jako:"+" " + personName );
-
-
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-
-                if(firebaseAuth.getCurrentUser() == null){
-
-                    startActivity(new Intent(AccountActivity.this, MainActivity.class));
-
-                }
-            }
-        };
-
+        setContentView(R.layout.activity_menu);
 
         mOcenybtn = (ImageButton) findViewById(R.id.ocenybtn);
         mOcenybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_oceny);
+                Intent myIntent = new Intent(MenuActivity.this, GroupActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                MenuActivity.this.startActivity(myIntent);
+                ;
             }
         });
 
@@ -76,7 +51,9 @@ public class AccountActivity extends AppCompatActivity {
         mOgloszeniabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_ogloszenia);
+                Intent myIntent = new Intent(MenuActivity.this, OgloszeniaActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                MenuActivity.this.startActivity(myIntent);
             }
         });
 
@@ -84,7 +61,9 @@ public class AccountActivity extends AppCompatActivity {
         mPlanbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_plan);
+                Intent myIntent = new Intent(MenuActivity.this, PlanActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                MenuActivity.this.startActivity(myIntent);
             }
         });
 
@@ -92,13 +71,15 @@ public class AccountActivity extends AppCompatActivity {
         mUwagibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_uwagi);
+                Intent myIntent = new Intent(MenuActivity.this, UwagiActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                MenuActivity.this.startActivity(myIntent);
             }
         });
 
 
         mLogOutBtn = (ImageButton) findViewById(R.id.logOutBtn);
-       mLogOutBtn.setOnClickListener(new View.OnClickListener() {
+        mLogOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -113,14 +94,5 @@ public class AccountActivity extends AppCompatActivity {
             }
         });
     }
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
-
-    }
-
-
 }
+
