@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.example.user.dzienniczekucznia.R;
 import com.example.user.dzienniczekucznia.data.DataAdapter;
 import com.example.user.dzienniczekucznia.models.Grupy;
-import com.example.user.dzienniczekucznia.remote.GroupService;
+
 import com.example.user.dzienniczekucznia.remote.JSONResponse;
 import com.example.user.dzienniczekucznia.remote.RequestInterface;
 
@@ -53,8 +53,9 @@ public class SiteActivity extends AppCompatActivity {
             recyclerView.setHasFixedSize(true);
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
             recyclerView.setLayoutManager(layoutManager);
-            loadJSON();
             recyclerView.setAdapter(adapter);
+            loadJSON();
+
 
         }
 
@@ -74,7 +75,7 @@ public class SiteActivity extends AppCompatActivity {
                     adapter.notifyDataSetChanged();
                     adapter.setData(data);
 
-                    Log.e("RESPONSE",response.toString());
+                    Log.e("RESPONSE11",response.toString());
 
                 }
 

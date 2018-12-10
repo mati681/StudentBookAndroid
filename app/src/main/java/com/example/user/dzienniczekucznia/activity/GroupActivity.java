@@ -3,14 +3,13 @@ package com.example.user.dzienniczekucznia.activity;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
 import com.example.user.dzienniczekucznia.R;
-import com.example.user.dzienniczekucznia.Testy.BackendUtil;
-import com.example.user.dzienniczekucznia.Testy.GrupaAdapter;
+import com.example.user.dzienniczekucznia.Remote.BackendUtil;
+import com.example.user.dzienniczekucznia.Remote.GrupaAdapter;
 import com.example.user.dzienniczekucznia.models.Grupy;
 
 import java.util.List;
@@ -44,7 +43,7 @@ public class GroupActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<List<Grupy>> call, Response<List<Grupy>> response) {
                     if(response.isSuccessful()){
-                        Log.d("Biblioteka - onResponse", "Success: " + response.body().toString());
+                        Log.d("STDBOOK - onResponse", "Success: " + response.body().toString());
                         List<Grupy> responseData = response.body();
                         if(grupaAdapter == null) {
                             grupaAdapter = new GrupaAdapter(_activity, R.layout.layout_item_gatunek, responseData);
@@ -55,13 +54,13 @@ public class GroupActivity extends AppCompatActivity {
                         }
                         lstGatunek.setAdapter(grupaAdapter);
                     }else{
-                        Log.d("Biblioteka -- onResse", "Failure: " + response.errorBody().toString());
+                        Log.d("STDBOOK -- onResse", "Failure: " + response.errorBody().toString());
                     }
                 }
 
                 @Override
                 public void onFailure(Call<List<Grupy>> call, Throwable t) {
-                    Log.e("Biblioteka - AonFailure","Fail: " + t.toString());
+                    Log.e("STDBOOK - AonFailure","Fail: " + t.toString());
                 }
             });
         }catch(Exception exp){

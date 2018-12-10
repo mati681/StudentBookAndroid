@@ -57,7 +57,7 @@ public class AccountActivity extends AppCompatActivity {
 
                 if(firebaseAuth.getCurrentUser() == null){
 
-                    startActivity(new Intent(AccountActivity.this, MainActivity.class));
+                    startActivity(new Intent(AccountActivity.this, SiteActivity.class));
 
                 }
             }

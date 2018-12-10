@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity  {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
 
                 if(firebaseAuth.getCurrentUser() != null){
-                    startActivity(new Intent(MainActivity.this,SiteActivity.class));
+                    startActivity(new Intent(MainActivity.this,GroupActivity.class));
                 }
             }
 
@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity  {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
 
+
     }
 
     @Override
@@ -116,7 +117,10 @@ public class MainActivity extends AppCompatActivity  {
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
-            setContentView(R.layout.activity_site);
+            //setContentView(R.layout.activity_group2);
+            Intent myIntent = new Intent(MainActivity.this, GroupActivity.class);
+            //myIntent.putExtra("key", value); //Optional parameters
+            MainActivity.this.startActivity(myIntent);
 
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             if (result.isSuccess()) {

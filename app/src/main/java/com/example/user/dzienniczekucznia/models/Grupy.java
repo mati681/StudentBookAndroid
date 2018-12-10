@@ -7,10 +7,16 @@ import java.util.List;
 
 public class Grupy {
 
+    @SerializedName("id")
+    @Expose
     private Long id;
 
+    @SerializedName("name")
+    @Expose
     private String name;
 
+    @SerializedName("Users")
+    @Expose
     private List<String> Users;
 
     public List<String> getUsers() {
